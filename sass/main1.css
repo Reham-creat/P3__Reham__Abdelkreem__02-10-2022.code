@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  max-width: 400px;
+}
+
+.loader__animation {
+  margin: 230px 98px;
+  border: 15px dashed #7cb6b6;
+  border-radius: 50%;
+  border-top: 15px dashed #c92b9c;
+  border-bottom: 15px dashed #a33c86;
+  width: 170px;
+  height: 170px;
+  -webkit-animation: spinner 3s ease-in-out normal forwards;
+          animation: spinner 3s ease-in-out normal forwards;
+  position: fixed;
+  opacity: 1;
+}
+@-webkit-keyframes spinner {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(360deg);
+    opacity: 2;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(360deg);
+    opacity: 2;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.wrapper {
+  -webkit-animation: fadeout 5s ease-in-out normal 1s;
+          animation: fadeout 5s ease-in-out normal 1s;
+}
+@-webkit-keyframes fadeout {
+  from {
+    opacity: -3;
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: -3;
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+.header {
+  width: 100%;
+  margin: 20px 0px;
+}
+.header__logo {
+  width: 40%;
+  margin-left: 100px;
+  font-family: "Shrikhand";
+}
+
+.main {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #f6eeee;
+  border-top: 2px solid #dad4d4;
+  width: 100%;
+  padding: 20px;
+}
+.main__paris {
+  margin-left: 20px;
+}
+.main__location {
+  margin-left: 90px;
+}
+
+.restaurants__heart__empty {
+  width: 20px;
+  float: right;
+  margin-right: 30px;
+  margin-top: -50px;
+  background-color: #efebeb;
+  background-image: url("imagesiconslikeheart-outline.svg");
+  cursor: pointer;
+  position: relative;
+  transition: all 1s ease-out 0.5s;
+}
+.restaurants__heart__empty:hover {
+  display: none;
+}
+.restaurants__heart__fill {
+  width: 20px;
+  float: right;
+  margin-right: 30px;
+  margin-top: -50px;
+  background-color: #efebeb;
+  background-image: url("imagesiconslikeheart-fill.svg");
+  display: block;
+  transition: all 2s ease-in-out 2s;
+}
+.restaurants__heart__fill:hover {
+  display: block;
+}
+
+.explore {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(246, 244, 244);
+  text-align: center;
+}
+.explore__p1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.explore__p1__span {
+  margin-bottom: 30px;
+  margin-left: 0px;
+  color: rgb(105, 102, 102);
+  font-size: 14px;
+}
+.explore__p1__p2 {
+  color: rgb(105, 102, 102);
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.explore__button {
+  margin-bottom: 50px;
+  padding: 12px 13px;
+  border-radius: 25px;
+  border: 0px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 14px;
+  width: 55%;
+  margin-left: 0px;
+  margin-top: 30px;
+}
+.explore__button:hover {
+  background: linear-gradient(#ff8de0, #9e67e0);
+  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.6);
+}
+
+.navbar__p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.navbar__button {
+  display: flex;
+  flex-direction: column;
+}
+.navbar__button:hover i {
+  color: #9356DC;
+}
+.navbar__button1:hover {
+  background-color: #ede5f1;
+}
+.navbar__button1 {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  padding: 10px;
+  width: 80%;
+  padding: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 0px;
+  margin-left: 40px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.4);
+}
+.navbar__span {
+  border-radius: 50%;
+  background-color: #9356DC;
+  padding: 5px 8px;
+  margin-left: -50px;
+  color: white;
+}
+.navbar__span2 {
+  margin-left: 60px;
+}
+.navbar__icon {
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+.restaurants {
+  background-color: #f2f2f2;
+  padding-top: 30px;
+}
+.restaurants__a {
+  text-decoration: none;
+}
+.restaurants__p1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.restaurants__h3 {
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 12px;
+}
+.restaurants__p {
+  font-size: 15px;
+  color: black;
+  font-weight: lighter;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  line-height: 1px;
+}
+
+.img__card {
+  position: relative;
+}
+
+.img__i {
+  width: 60px;
+  height: 30px;
+  background-color: rgb(201, 243, 201);
+  color: green;
+  position: absolute;
+  display: flex;
+  margin-top: -230px;
+  margin-left: 260px;
+  font-weight: bold;
+  font-size: 13px;
+  justify-content: center;
+  padding-top: 7px;
+  text-decoration: none;
+}
+
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  width: 85%;
+}
+.restaurants__cards__img {
+  width: 100%;
+  height: 45%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.restaurants__img4 {
+  height: 260px;
+}
+
+.restaurants__number {
+  border-radius: 10px;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(71, 67, 67);
+  width: 100%;
+  padding: 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.footer__h3 {
+  margin-left: -7px;
+  margin-bottom: 0px;
+  color: white;
+  margin-top: 0px;
+  text-align: left;
+  font-size: 13px;
+  font-family: "Shrikhand";
+  font-weight: 5;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+}
+.footer__li {
+  list-style: none;
+  font-size: 11px;
+}
+.footer__a {
+  text-decoration: none;
+  color: white;
+  margin-left: -40px;
+}
+.footer__li1__icon {
+  margin-right: 5px;
+}
+.footer__li2__icon {
+  margin-right: 5px;
+}/*# sourceMappingURL=main1.css.map */
